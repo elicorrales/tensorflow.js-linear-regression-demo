@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+-->
+    <link rel="stylesheet" href="../../../bootstrap.min.css">
+    <title>Tensor Flow Linear Regression</title>
+</head>
+
+<body>
+
+    <h1>Tensor Flow Linear Regression</H1>
+
+    <div id="messages"></div>
+
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Neural Network Controls
+                </div>
+                <div class="panel-body">
+                    Learning Rate: <span id="learningRate"></span>
+                    <input id="learningRateSlider" type="range" min="0.01" max="3.0" step="0.01" value="0.2"
+                        onchange="doChangeLearningRate(this)">
+                    <button class="btn btn-default" onclick="doRemoveAllPointsOnCanvas()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Canvas
+                </div>
+                <div class="row">
+                    <div class="panel-body" style="background:aliceblue">
+                        <div class="col-xs-6">
+                            <div id="canvasParent"></div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div id="JUMBOTRON" style="display:none" class="jumbotron jumbotron-fluid">
+                                <center>
+                                    <h1 class="display-4" id="GUESS"></h1>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!--
+
+<script src="p5.min.js"></script>
+<script src="../../../p5/addons/p5.dom.min.js"></script>
+-->
+<script src="../../../p5/p5.min.js"></script>
+<script src="../../libraries/tfjs-1.1.2/dist/tf.min.js"></script>
+<!--
+<script src="tensors.how.to.create.and.get.data.js"></script>
+<script src="tensors.math.operations.js"></script>
+<script src="tensor.flow.memory.management.js"></script>
+<script src="tensor.flow.layers.api.js"></script>
+-->
+<!--
+-->
+<script src="mouse.events.js"></script>
+<script src="point.funcs.js"></script>
+<script src="regression.line.funcs.js"></script>
+<script src="index.html.event.funcs.js"></script>
+<script src="sketch.js"></script>
+<!--
+<script src="shiffman.sketch.js"></script>
+-->
+</html>
